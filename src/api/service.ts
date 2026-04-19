@@ -122,6 +122,8 @@ export class TuyaWebApi implements SharingTokenListener {
       "  4. Confirm the authorization in the app",
     );
     this.log?.info("----------------------------------------");
+    this.log?.info("QR setup payload (paste into any QR generator if needed):");
+    this.log?.info("%s", qrData);
 
     try {
       const qrText = await QRCode.toString(qrData, {
